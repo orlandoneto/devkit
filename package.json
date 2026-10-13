@@ -1,0 +1,63 @@
+{
+  "name": "devkit",
+  "version": "1.0.0",
+  "description": "devKit - free, open-source developer tools that run in your browser.",
+  "license": "GPL-3.0-only",
+  "author": "José Orlando Neto (https://github.com/orlandoneto)",
+  "homepage": "https://github.com/orlandoneto/devkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orlandoneto/devkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orlandoneto/devkit/issues"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "tsc --pretty false --noEmit false --outDir .tmp-cpf-test --module commonjs --moduleResolution node --target ES2020 --esModuleInterop --skipLibCheck src/lib/local-history.ts src/lib/local-history.test.ts src/lib/cpf/history.ts src/lib/cpf/history.test.ts src/lib/cpf/formatter.ts src/lib/email/index.ts src/lib/email/generate.test.ts && node --test .tmp-cpf-test/local-history.test.js .tmp-cpf-test/cpf/history.test.js .tmp-cpf-test/email/generate.test.js"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^7.6.2",
+    "@radix-ui/react-accordion": "^1.2.20",
+    "@radix-ui/react-label": "^2.1.15",
+    "@radix-ui/react-select": "^2.3.7",
+    "@radix-ui/react-separator": "^1.1.15",
+    "@radix-ui/react-slot": "^1.3.3",
+    "@radix-ui/react-switch": "^1.3.7",
+    "@radix-ui/react-tabs": "^1.1.21",
+    "@radix-ui/react-tooltip": "^1.2.16",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "exifr": "^7.1.3",
+    "jsbarcode": "^3.12.3",
+    "lucide-react": "^1.27.0",
+    "motion": "^12.42.2",
+    "next": "16.2.12",
+    "next-intl": "^4.13.4",
+    "pdfjs-dist": "^5.6.205",
+    "qrcode": "^1.5.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.6.0",
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/jsbarcode": "^3.11.4",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
